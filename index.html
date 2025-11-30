@@ -1,12 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Karl Kilbo Edlund</title>
+
+    <style>
+        /* --- Reset & basics --- */
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background: #FFFFF8;
+            color: #222;
+        }
+
+        a {
+            color: #304C00;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Layout container --- */
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* --- Header + Navigation --- */
+        header {
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            font-weight: bold;
+        }
+
+        /* --- Main content box --- */
+        main {
+            background: #fff;
+            padding: 25px;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #ddd;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome</h1>
-    <p>This is a simple placeholder website.</p>
+
+    <div class="container">
+        <header>
+            <h1>Kilboedlund</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="advocacy.html">Advocacy</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Karl Kilbo Edlund</h2>
+            <p>MD, PhD</p>        </main>
+
+        <footer>
+            &copy; <span id="year"></span> Kilboedlund
+        </footer>
+    </div>
+
+    <script>
+        // automatically updates the year
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
 </body>
 </html>
