@@ -1,1 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karl Kilbo Edlund</title>
 
+    <style>
+        /* --- Reset & basics --- */
+        body {
+            margin: 0;
+            font-family: helvetica;
+            background: #FFFFF8;
+            color: #222;
+        }
+
+        a {
+            color: #304C00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Layout container --- */
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* --- Header + Navigation --- */
+        header {
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            font-weight: bold;
+        }
+
+
+        /* --- Main content box --- */
+        main {
+        	margin-bottom: 10px;
+            background: #fff;
+            padding: 25px;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+        }
+        
+        /* --- Projects --- */
+        .project-head {
+            font-weight: bold;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        
+        .project-meta {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .project-meta span {
+            margin-right: 12px;
+        }
+
+
+        /* --- Button style --- */
+        .button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 18px;
+            background-color: #FFFFF8;
+            color: #304C00;
+            border-radius: 10px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            color: #223600;
+            text-decoration: none;
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Karl Kilbo Edlund <small>MD PhD</small></h1>
+            <p>Researcher-physician at the <a href="https://www.gu.se">University of Gothenburg&#8599;</a> and <a href="https://www.sahlgrenska.se/">Sahlgrenska University Hospital&#8599;</a></p>
+         <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="https://docs.google.com/document/d/1m1pRNjt0ojEdiQ7f5mBmDT1e0E7gK87xYkjalEKizIE/edit?usp=sharing">CV</a></li>
+                <li><a href="https://scholar.google.com/citations?user=Y_S51dYAAAAJ&hl=en">Publications</a></li>
+                <li><a href="projects_res.html">Research Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+<h2>Ongoing research projects</h2>
+
+<div class="project">
+<div class="project-head">
+<p>Occupational particle exposure and risk of type 2 diabetes among Swedish construction workers</p>
+</div>
+<div class="project-meta">
+<span>2025–ongoing</span>
+<span>Funded by: Gothenburg Medical Society</span>
+</div>
+</div>
+
+<div class="project">
+<div class="project-head">
+<p>Occupational particle exposure and risk of chronic kidney disease in the UK Biobank</p>
+</div>
+<div class="project-meta">
+<span>2025–ongoing</span>
+<span>Funded by: Swedish Research Council for Health, Working Life and Welfare (FORTE)</span>
+</div>
+</div>
+
+<div class="project">
+<div class="project-head">
+<p>Multi-cohort study of ambient air pollution and chronic kidney disease</p>
+</div>
+<div class="project-meta">
+<span>2023–ongoing</span>
+<span>Funded by: FORTE</span>
+</div>
+</div>
+</main>
+<span></span>
+
+<main>
+<h2>Concluded research projects</h2>
+
+<div class="project">
+<div class="project-head">
+<p>Title</p>
+</div>
+<div class="project-meta">
+<span>XXXX–XXXX</span>
+<span>Funded by: </span>
+</div>
+</div>
+
+<div class="project">
+<div class="project-head">
+<p>Title</p>
+</div>
+<div class="project-meta">
+<span>XXXX–XXXX</span>
+<span>Funded by: </span>
+</div>
+</div>
+
+<div class="project">
+<div class="project-head">
+<p>Title</p>
+</div>
+<div class="project-meta">
+<span>XXXX–XXXX</span>
+<span>Funded by: </span>
+</div>
+</div>
+</main>
+
+
+<p>See my affiliations, works, funding, and peer review activities on <a href = "https://orcid.org/0000-0001-7586-4119">ORCID&#8599;</a>.</p>
+<p>Connect with me on <a href = "https://www.linkedin.com/in/karl-kilbo-edlund-b62a67217/">LinkedIn&#8599;</a> or <a href="https://www.researchgate.net/profile/Karl-Kilbo-Edlund">ResearchGate&#8599;</a>.</p>
+<p>Read my musings on life, research, and clinical work on <a href = "https://substack.com/@karlkilboedlund?">Substack&#8599;</a>.</p>
+        <footer>
+            &copy; Karl Kilbo Edlund, <span id="year"></span> 
+        </footer>
+    </div>
+
+    <script>
+        // automatically updates the year
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
