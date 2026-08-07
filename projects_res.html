@@ -61,21 +61,74 @@
         }
         
         /* --- Projects --- */
-        .project-head {
-            font-weight: bold;
-            color: #666;
-            margin-bottom: 8px;
-        }
-        
-        .project-meta {
-            font-size: 0.85rem;
-            color: #666;
-            margin-bottom: 8px;
-        }
+.project {
+    margin-bottom: 2rem;
+}
 
-        .project-meta span {
-            margin-right: 12px;
-        }
+.project-head {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #444;
+}
+
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.25rem;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.project-meta span {
+    white-space: nowrap;
+}
+
+.project-publications {
+    padding-top: 0.75rem;
+    padding-left: 0.75rem;
+}
+
+.project-publications h4 {
+    margin: 0 0 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #666;
+}
+
+.publication {
+    margin: 0 0 0.9rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+.publication:last-child {
+    margin-bottom: 0;
+}
+
+.publication-title {
+    display: block;
+    font-weight: 600;
+    color: #444;
+}
+
+.publication-authors {
+    display: block;
+}
+
+.publication-details {
+    display: block;
+    color: #666;
+}
+
+.publication-details a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
 
 
         /* --- Button style --- */
@@ -126,31 +179,43 @@
 
 <div class="project">
 <div class="project-head">
-<p>Occupational particle exposure and risk of type 2 diabetes among Swedish construction workers</p>
-</div>
-<div class="project-meta">
-<span>2025–ongoing</span>
-<span>Funded by: Gothenburg Medical Society</span>
-</div>
-</div>
-
-<div class="project">
-<div class="project-head">
 <p>Occupational particle exposure and risk of chronic kidney disease in the UK Biobank</p>
 </div>
 <div class="project-meta">
 <span>2025–ongoing</span>
-<span>Funded by: Swedish Research Council for Health, Working Life and Welfare (FORTE)</span>
+<span>Funded by: Swedish Research Council for Health, Working Life and Welfare</span>
 </div>
 </div>
 
 <div class="project">
 <div class="project-head">
-<p>Multi-cohort study of ambient air pollution and chronic kidney disease</p>
+<p>Short-term ambient O3, temperature, and blood pressure in the SCAPIS cohort</p>
+</div>
+<div class="project-meta">
+<span>2025–ongoing</span>
+</div>
+</div>
+
+<div class="project">
+<div class="project-head">
+<p>Multi-cohort study of ambient air pollution and chronic kidney disease in SCAPIS</p>
 </div>
 <div class="project-meta">
 <span>2023–ongoing</span>
-<span>Funded by: FORTE</span>
+<span>Funded by: Swedish Research Council for Health, Working Life and Welfare</span>
+</div>
+</div>
+
+<div class="project">
+<div class="project-head">
+<p>Air pollution, noise, and greenness exposure, and kidney function and injury in SCAPIS</p>
+</div>
+<div class="project-meta">
+<span>2023–ongoing</span>
+<span>Funded by: Swedish Research Council for Health, Working Life and Welfare</span>
+<br><br>
+<div>Publications in this project:</div>
+<ul><li>“Long-term ambient air pollution exposure and renal function and biomarkers of renal disease” <i>Environ Health</i> 2024 23, 67 (<a>doi.org/10.1186/s12940-024-01108-9</a>).</li></ul>
 </div>
 </div>
 </main>
@@ -160,34 +225,65 @@
 <h2>Concluded research projects</h2>
 
 <div class="project">
-<div class="project-head">
-<p>Title</p>
-</div>
-<div class="project-meta">
-<span>XXXX–XXXX</span>
-<span>Funded by: </span>
-</div>
+    <h3 class="project-head">
+        Occupational particle exposure and risk of type 2 diabetes among Swedish construction workers
+    </h3>
+
+    <div class="project-meta">
+        <span>2025–ongoing</span>
+        <span>Funder: Gothenburg Medical Society</span>
+    </div>
+
+    <div class="project-publications">
+        <h4>Publications</h4>
+
+        <p class="publication">
+            <span class="publication-title">
+                Occupational particle exposure and diabetes: a cohort study in Swedish construction workers
+            </span>
+            <span class="publication-authors">
+                Kilbo Edlund K., Sand E., Andersson M., Johannesson S., Eliasson B., Stockfelt L.
+            </span>
+            <span class="publication-details">
+                2026 · <i>International Archives of Occupational and Environmental Health</i> ·
+                <a href="https://doi.org/10.1007/s00420-026-02224-4">
+                    10.1007/s00420-026-02224-4
+                </a>
+            </span>
+        </p>
+    </div>
 </div>
 
 <div class="project">
-<div class="project-head">
-<p>Title</p>
-</div>
-<div class="project-meta">
-<span>XXXX–XXXX</span>
-<span>Funded by: </span>
-</div>
+    <h3 class="project-head">
+        Bibliometric trends in air pollution research
+    </h3>
+
+    <div class="project-meta">
+        <span>2023–2026</span>
+        <span>Funder: None.</span>
+    </div>
+
+    <div class="project-publications">
+        <h4>Publications</h4>
+
+        <p class="publication">
+            <span class="publication-title">
+                 Air pollution and publications: historic and emerging trends in research topics - a bibliometric study
+            </span>
+            <span class="publication-authors">
+                Kilbo Edlund K., Tuffier S. [shared first authorship], Cole-Hunter T., Loft S.
+            </span>
+            <span class="publication-details">
+                2026 · <i>Environ. Res.: Health</i> ·
+                <a href="https://doi.org/10.1088/2752-5309/ae4f18">10.1088/2752-5309/ae4f18
+                </a>
+            </span>
+        </p>
+    </div>
 </div>
 
-<div class="project">
-<div class="project-head">
-<p>Title</p>
-</div>
-<div class="project-meta">
-<span>XXXX–XXXX</span>
-<span>Funded by: </span>
-</div>
-</div>
+
 </main>
 
 
@@ -200,7 +296,6 @@
     </div>
 
     <script>
-        // automatically updates the year
         document.getElementById("year").textContent = new Date().getFullYear();
     </script>
 
