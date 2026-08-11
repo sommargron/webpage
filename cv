@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karl Kilbo Edlund</title>
+
+    <style>
+        /* --- Reset & basics --- */
+        body {
+            margin: 0;
+            font-family: helvetica;
+            background: #FFFFF8;
+            color: #222;
+        }
+
+        a {
+            color: #304C00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Layout container --- */
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* --- Header + Navigation --- */
+        header {
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            font-weight: bold;
+        }
+
+
+        /* --- Main content box --- */
+        main {
+            background: #fff;
+            padding: 25px;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+        }
+
+        /* --- Button style --- */
+        .button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 18px;
+            background-color: #FFFFF8;
+            color: #304C00;
+            border-radius: 10px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            color: #223600;
+            text-decoration: none;
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #ddd;
+        }
+
+.cv-embed iframe {
+    display: block;
+    width: 100%;
+    height: 80vh;
+    min-height: 700px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Karl Kilbo Edlund <small>MD PhD</small></h1>
+            <p>Researcher-physician at the <a href="https://www.gu.se">University of Gothenburg&#8599;</a> and <a href="https://www.sahlgrenska.se/">Sahlgrenska University Hospital&#8599;</a></p>
+         <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="https://docs.google.com/document/d/1m1pRNjt0ojEdiQ7f5mBmDT1e0E7gK87xYkjalEKizIE/edit?usp=sharing">CV</a></li>
+                <li><a href="https://scholar.google.com/citations?user=Y_S51dYAAAAJ&hl=en">Publications</a></li>
+                <li><a href="projects_res.html">Research Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<p class="cv-link">
+    <a href="YOUR_PUBLISHED_DOCUMENT_URL" target="_blank" rel="noopener">
+        Open CV in a new window
+        <i data-lucide="external-link" aria-hidden="true"></i>
+    </a>
+</p>
+
+<div class="cv-embed">
+<iframe src="https://docs.google.com/document/d/e/2PACX-1vR8LLsrs_Nzlqo7irwCof6nuJbiyZ8vBpL5P11DEnaoG8P1CE2heb2ifa_Gp7hYWSSIK2ry_njQcCe2/pub?embedded=true"
+        title="Curriculum vitae – Karl Kilbo Edlund"
+        loading="lazy">
+    </iframe>
+</div>
+
+    <script>
+        // automatically updates the year
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
