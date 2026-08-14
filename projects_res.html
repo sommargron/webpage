@@ -6,141 +6,182 @@
     <title>Karl Kilbo Edlund</title>
 
     <style>
-        /* --- Reset & basics --- */
+        :root {
+            --background: #fffff8;
+            --surface: #fff;
+            --text: #222;
+            --text-muted: #666;
+            --accent: #304c00;
+            --border: #ddd;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
-            font-family: helvetica;
-            background: #FFFFF8;
-            color: #222;
+            font-family: Helvetica, Arial, sans-serif;
+            color: var(--text);
+            background: var(--background);
         }
 
         a {
-            color: #304C00;
+            color: var(--accent);
+            font-weight: 600;
             text-decoration: none;
-            font-weight: bold;
         }
 
         a:hover {
             text-decoration: underline;
         }
 
-        /* --- Layout container --- */
         .container {
             max-width: 860px;
             margin: 0 auto;
             padding: 20px;
         }
 
-        /* --- Header + Navigation --- */
         header {
-            padding-bottom: 10px;
             margin-bottom: 20px;
-            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav ul,
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
         }
 
         nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
             gap: 20px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
         }
 
-        nav a {
-            font-weight: bold;
-        }
-
-
-        /* --- Main content box --- */
         main {
-        	margin-bottom: 10px;
+            margin-bottom: 10px;
         }
-        
-        /* --- Projects --- */
-.project {
-    margin-bottom: 2rem;
-            background: #fff;
-            padding: 10px;
+
+        .project {
+            margin-bottom: 2rem;
+            padding: 16px;
+            background: var(--surface);
             border-radius: 12px;
-            box-shadow: 0 5px 10px rgba(0,0,0,0.20);
-}
+            box-shadow: 0 4px 12px rgb(0 0 0 / 12%);
+        }
 
-.project-head {
-    margin: 0 0 0.5rem;
-    font-size: 1rem;
-    font-weight: 600;
-    line-height: 1.4;
-    color: #444;
-}
+        .project-head {
+            margin: 0 0 0.5rem;
+            color: #444;
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 1.4;
+        }
 
-.project-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.25rem 1.25rem;
-    margin-bottom: 1rem;
-    font-size: 0.85rem;
-    color: #666;
-}
+        .project-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.25rem 1.25rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
 
-.project-meta span {
-    white-space: nowrap;
-}
+        .project-meta span:first-child {
+            white-space: nowrap;
+        }
 
-.project-publications {
-    padding-top: 0.75rem;
-    padding-left: 0.75rem;
-}
+        .project-tags {
+            gap: 6px;
+            margin-top: 10px;
+        }
 
-.project-publications h4 {
-    margin: 0 0 0.75rem;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: #666;
-}
+        .project-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 3px 8px;
+            border: 1px solid #d8d8d8;
+            border-radius: 999px;
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            line-height: 1.3;
+        }
 
-.publication {
-    margin: 0 0 0.9rem;
-    font-size: 0.85rem;
-    line-height: 1.5;
-    color: #555;
-}
+        .project-tag.organ {
+            color: #555;
+            background: #f1f1f1;
+            border-color: transparent;
+        }
 
-.publication:last-child {
-    margin-bottom: 0;
-}
+        .project-tag svg {
+            width: 14px;
+            height: 14px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.7;
+        }
 
-.publication-title {
-    display: block;
-    font-weight: 600;
-    color: #444;
-}
+        .project-outputs {
+            margin-top: 1rem;
+            padding-top: 0.85rem;
+            border-top: 1px solid #e8e8e8;
+        }
 
-.publication-authors {
-    display: block;
-}
+        .project-outputs + .project-outputs {
+            margin-top: 0.9rem;
+        }
 
-.publication-details {
-    display: block;
-    color: #666;
-}
+        .project-outputs h4 {
+            margin: 0 0 0.7rem;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+        }
 
-.publication-details a {
-    color: inherit;
-    text-decoration: underline;
-    text-underline-offset: 2px;
-}
+        .entry {
+            margin: 0 0 0.9rem;
+            color: #555;
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
 
+        .entry:last-child {
+            margin-bottom: 0;
+        }
 
-        /* --- Button style --- */
+        .entry-title,
+        .entry-authors,
+        .entry-details {
+            display: block;
+        }
+
+        .entry-title {
+            color: #444;
+            font-weight: 600;
+        }
+
+        .entry-details {
+            color: var(--text-muted);
+        }
+
+        .entry-details a {
+            color: inherit;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
         .button {
             display: inline-block;
             margin-top: 15px;
             padding: 10px 18px;
-            background-color: #FFFFF8;
-            color: #304C00;
+            color: var(--accent);
+            background: var(--background);
             border-radius: 10px;
-            font-weight: bold;
-            text-decoration: none;
         }
 
         .button:hover {
@@ -148,49 +189,14 @@
             text-decoration: none;
         }
 
-        /* --- Footer --- */
         footer {
-            text-align: center;
-            font-size: 0.85rem;
-            color: #666;
             margin-top: 30px;
             padding-top: 15px;
-            border-top: 1px solid #ddd;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            text-align: center;
         }
-        
-        /* --- Tags --- */
-        .project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-top: 10px;
-}
-
-.project-tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    padding: 3px 8px;
-    border: 1px solid #d8d8d8;
-    border-radius: 999px;
-    color: #666;
-    font-size: 0.75rem;
-    line-height: 1.3;
-}
-
-.project-tag svg {
-    width: 14px;
-    height: 14px;
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 1.7;
-}
-
-.project-tag.organ {
-    border-color: transparent;
-    background: #f1f1f1;
-    color: #555;
-}
     </style>
 </head>
 <body>
@@ -321,28 +327,58 @@
                     <i data-lucide="hospital" aria-hidden="true"></i>
                     Kidney
                 </span>
-                
-                <div class="project-publications">
+            </div>
+
+            <div class="project-outputs">
                 <h4>Publications</h4>
 
-                <p class="publication">
-                    <span class="publication-title">
+                <p class="entry">
+                    <span class="entry-title">
                         Long-term ambient air pollution exposure and renal function and biomarkers of renal disease
                     </span>
 
-                    <span class="publication-authors">
+                    <span class="entry-authors">
                         Kilbo Edlund K., Xu Y., Andersson E.M., Christensson A., Dehlin M., Forsblad-d’Elia H., Harari F., Ljunggren S., Molnár P., Oudin A., Svartengren M., Ljungman P., Stockfelt L.
                     </span>
 
-                    <span class="publication-details">
+                    <span class="entry-details">
                         2024 · <i>Environmental Health</i> · 23,67 ·
                         <a href="https://doi.org/10.1186/s12940-024-01108-9">
                             10.1186/s12940-024-01108-9
                         </a>
                     </span>
                 </p>
-                            </div>
-                
+            </div>
+
+            <div class="project-outputs">
+                <h4>Conference presentations</h4>
+
+                <p class="entry">
+                    <span class="entry-title">
+                        Long-term road traffic noise and air pollution exposure and early kidney damage in the Swedish CArdioPulmonary bioImage Study (SCAPIS)
+                    </span>
+                    <span class="entry-details">
+                        ICBEN Congress on Noise as a Public Health Problem · 2026 · Copenhagen, Denmark
+                    </span>
+                </p>
+
+                <p class="entry">
+                    <span class="entry-title">
+                        Long-term ambient air pollution exposure and renal function and biomarkers of renal injury in the population-based Swedish SCAPIS cohort
+                    </span>
+                    <span class="entry-details">
+                        ISEE Young Conference · 2024 · Rennes, France
+                    </span>
+                </p>
+
+                <p class="entry">
+                    <span class="entry-title">
+                        Renal function and long-term ambient air pollution at low exposure levels
+                    </span>
+                    <span class="entry-details">
+                        34th Annual Conference of the International Society for Environmental Epidemiology (ISEE) · 2022 · Athens, Greece
+                    </span>
+                </p>
             </div>
         </div>
     </section>
@@ -382,19 +418,19 @@
                 </span>
             </div>
 
-            <div class="project-publications">
+            <div class="project-outputs">
                 <h4>Publications</h4>
 
-                <p class="publication">
-                    <span class="publication-title">
+                <p class="entry">
+                    <span class="entry-title">
                         Occupational particle exposure and diabetes: a cohort study in Swedish construction workers
                     </span>
 
-                    <span class="publication-authors">
+                    <span class="entry-authors">
                         Kilbo Edlund K., Sand E., Andersson M., Johannesson S., Eliasson B., Stockfelt L.
                     </span>
 
-                    <span class="publication-details">
+                    <span class="entry-details">
                         2026 · <i>International Archives of Occupational and Environmental Health</i> ·
                         <a href="https://doi.org/10.1007/s00420-026-02224-4">
                             10.1007/s00420-026-02224-4
@@ -402,21 +438,34 @@
                     </span>
                 </p>
 
-                <p class="publication">
-                    <span class="publication-title">
+                <p class="entry">
+                    <span class="entry-title">
                         Occupational particle exposure and chronic kidney disease: a cohort study in Swedish construction workers
                     </span>
 
-                    <span class="publication-authors">
+                    <span class="entry-authors">
                         Kilbo Edlund K., Andersson E.M., Andersson M., Barregard L., Christensson A.,
                         Johannesson S., Harari F., Murgia N., Torén K., Stockfelt L.
                     </span>
 
-                    <span class="publication-details">
+                    <span class="entry-details">
                         2024 · <i>Occupational and Environmental Medicine</i> · 81(5):238–243 ·
                         <a href="https://doi.org/10.1136/oemed-2023-109371">
                             10.1136/oemed-2023-109371
                         </a>
+                    </span>
+                </p>
+            </div>
+
+            <div class="project-outputs">
+                <h4>Conference presentations</h4>
+
+                <p class="entry">
+                    <span class="entry-title">
+                        Occupational particle exposure is associated with chronic kidney disease onset during working age – a cohort study in Swedish construction workers
+                    </span>
+                    <span class="entry-details">
+                        34th International Congress on Occupational Health (ICOH) · 2024 · Marrakech, Morocco
                     </span>
                 </p>
             </div>
@@ -444,22 +493,22 @@
                 </span>
             </div>
 
-            <div class="project-publications">
+            <div class="project-outputs">
                 <h4>Publications</h4>
 
-                <p class="publication">
-                    <span class="publication-title">
+                <p class="entry">
+                    <span class="entry-title">
                         Long-term ambient air pollution and coronary atherosclerosis: Results from the Swedish SCAPIS study
                     </span>
 
-                    <span class="publication-authors">
+                    <span class="entry-authors">
                         Kilbo Edlund K., Andersson E.M., Asker C., Barregard L., Bergström G.,
                         Eneroth K., Jernberg T., Ljunggren S., Molnár P., Nilsson Sommar J.,
                         Oudin A., Pershagen G., Persson Å., Pyko A., Spanne M., Tondel M.,
                         Ögren M., Ljungman P., Stockfelt L.
                     </span>
 
-                    <span class="publication-details">
+                    <span class="entry-details">
                         2024 · <i>Atherosclerosis</i> · 117576 ·
                         <a href="https://doi.org/10.1016/j.atherosclerosis.2024.117576">
                             10.1016/j.atherosclerosis.2024.117576
@@ -467,22 +516,44 @@
                     </span>
                 </p>
 
-                <p class="publication">
-                    <span class="publication-title">
+                <p class="entry">
+                    <span class="entry-title">
                         Long-term exposure to air pollution, coronary artery calcification, and carotid artery plaques in the population-based Swedish SCAPIS Gothenburg cohort
                     </span>
 
-                    <span class="publication-authors">
+                    <span class="entry-authors">
                         Kilbo Edlund K., Sallsten G., Molnár P., Andersson E.M., Ögren M.,
                         Segersson D., Fagman E., Fagerberg B., Barregard L., Bergström G.,
                         Stockfelt L.
                     </span>
 
-                    <span class="publication-details">
+                    <span class="entry-details">
                         2022 · <i>Environmental Research</i> · 214:113926 ·
                         <a href="https://doi.org/10.1016/j.envres.2022.113926">
                             10.1016/j.envres.2022.113926
                         </a>
+                    </span>
+                </p>
+            </div>
+
+            <div class="project-outputs">
+                <h4>Conference presentations</h4>
+
+                <p class="entry">
+                    <span class="entry-title">
+                        Long-term exposure to air pollution and coronary atherosclerosis, calcification, and non-calcified plaques – results from the Swedish SCAPIS study
+                    </span>
+                    <span class="entry-details">
+                        35th Annual Conference of the International Society for Environmental Epidemiology (ISEE) · 2023 · Kaohsiung, Taiwan
+                    </span>
+                </p>
+
+                <p class="entry">
+                    <span class="entry-title">
+                        Long-term ambient air pollution and renal function and atherosclerosis in middle-aged Gothenburg residents
+                    </span>
+                    <span class="entry-details">
+                        GAC Biennial Conference · 2022 · Gothenburg, Sweden
                     </span>
                 </p>
             </div>
@@ -510,24 +581,24 @@
                 </span>
             </div>
 
-            <div class="project-publications">
+            <div class="project-outputs">
                 <h4>Publications</h4>
 
-                <p class="publication">
-                    <span class="publication-title">
+                <p class="entry">
+                    <span class="entry-title">
                         High-resolution dispersion modelling of PM<sub>2.5</sub>,
                         PM<sub>10</sub>, NO<sub>x</sub> and NO<sub>2</sub> exposure in
                         metropolitan areas in Sweden 2000–2018 – large health gains due to
                         decreased population exposure
                     </span>
 
-                    <span class="publication-authors">
+                    <span class="entry-authors">
                         Kilbo Edlund K., Kisiel M., Asker C., Segersson D., Bennet C.,
                         Spanne M., Gustafsson S., Lindvall J., Eneroth K., Tondel M.,
                         Ljungman P., Stockfelt L., Pershagen G., Molnár P.
                     </span>
 
-                    <span class="publication-details">
+                    <span class="entry-details">
                         2024 · <i>Air Quality, Atmosphere &amp; Health</i> ·
                         <a href="https://doi.org/10.1007/s11869-024-01535-0">
                             10.1007/s11869-024-01535-0
@@ -558,19 +629,19 @@
                 </span>
             </div>
 
-            <div class="project-publications">
+            <div class="project-outputs">
                 <h4>Publications</h4>
 
-                <p class="publication">
-                    <span class="publication-title">
+                <p class="entry">
+                    <span class="entry-title">
                         Air pollution and publications: historic and emerging trends in research topics – a bibliometric study
                     </span>
 
-                    <span class="publication-authors">
+                    <span class="entry-authors">
                         Kilbo Edlund K., Tuffier S. [shared first authorship], Loft S., Cole-Hunter T.
                     </span>
 
-                    <span class="publication-details">
+                    <span class="entry-details">
                         2026 · <i>Environmental Research: Health</i> ·
                         <a href="https://doi.org/10.1088/2752-5309/ae4f18">
                             10.1088/2752-5309/ae4f18
@@ -607,21 +678,21 @@
                 </span>
             </div>
 
-            <div class="project-publications">
+            <div class="project-outputs">
                 <h4>Publications</h4>
 
-                <p class="publication">
-                    <span class="publication-title">
+                <p class="entry">
+                    <span class="entry-title">
                         Health risk assessment of PM<sub>2.5</sub> and
                         PM<sub>2.5</sub>-bound trace elements in Thohoyandou, South Africa
                     </span>
 
-                    <span class="publication-authors">
+                    <span class="entry-authors">
                         Kilbo Edlund K., Killman F. [shared first authorship], Molnár P.,
                         Boman J., Stockfelt L., Wichmann J.
                     </span>
 
-                    <span class="publication-details">
+                    <span class="entry-details">
                         2021 · <i>International Journal of Environmental Research and Public Health</i>
                         · 18:1359 ·
                         <a href="https://doi.org/10.3390/ijerph18031359">
@@ -633,24 +704,22 @@
         </div>
     </section>
 
-</main>
+        </main>
 
+        <p>See my affiliations, works, funding, and peer review activities on <a href="https://orcid.org/0000-0001-7586-4119">ORCID&#8599;</a>.</p>
+        <p>Connect with me on <a href="https://www.linkedin.com/in/karl-kilbo-edlund-b62a67217/">LinkedIn&#8599;</a> or <a href="https://www.researchgate.net/profile/Karl-Kilbo-Edlund">ResearchGate&#8599;</a>.</p>
+        <p>Read my musings on life, research, and clinical work on <a href="https://substack.com/@karlkilboedlund?">Substack&#8599;</a>.</p>
 
-<p>See my affiliations, works, funding, and peer review activities on <a href = "https://orcid.org/0000-0001-7586-4119">ORCID&#8599;</a>.</p>
-<p>Connect with me on <a href = "https://www.linkedin.com/in/karl-kilbo-edlund-b62a67217/">LinkedIn&#8599;</a> or <a href="https://www.researchgate.net/profile/Karl-Kilbo-Edlund">ResearchGate&#8599;</a>.</p>
-<p>Read my musings on life, research, and clinical work on <a href = "https://substack.com/@karlkilboedlund?">Substack&#8599;</a>.</p>
         <footer>
-            &copy; Karl Kilbo Edlund, <span id="year"></span> 
+            &copy; Karl Kilbo Edlund, <span id="year"></span>
         </footer>
     </div>
 
+    <script src="https://unpkg.com/lucide@1.31.0/dist/umd/lucide.min.js"></script>
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
+        lucide.createIcons();
     </script>
-    <script src="https://unpkg.com/lucide@1.31.0/dist/umd/lucide.min.js"></script>
-<script>
-    lucide.createIcons();
-</script>
 
 </body>
 </html>
